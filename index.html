@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports DB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">Sports DB</a>
+            <div class="space-x-4">
+                <a href="#" class="text-white">Home</a>
+                <a href="#" class="text-white">Players</a>
+                <a href="#" class="text-white">Teams</a>
+                <a href="#" class="text-white">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="sm:w-[90%] w-[96%] 2xl:w-[80%] mx-auto mt-10">
+        <!-- Search Bar -->
+        <div class="flex justify-center">
+            <input id="search" type="text" class="w-full max-w-xl p-2 border border-gray-300 rounded" placeholder="Search for a player...">
+            <button onclick="searchPlayer()" class="bg-blue-600 text-white p-2 rounded ml-2">Search</button>
+        </div>
+        <!-- Search Results -->
+        <section class="my-10 grid md:grid-cols-[80%_minmax(15%,_1fr)] grid-cols-1 gap-[20px]">
+            <!-- left -->
+            <div id="results" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+                
+            </div>
+            <!-- right -->
+            <div id="group" class="hidden w-full ">
+                <h1 class="text-center my-[10px] text-[20px] font-bold">Total member : <span id="total_mem">0</span></h1>
+                <div class="border border-gray-300 rounded p-2 h-[70vh] overflow-y-auto" id="group_div">
+                    
+                </div>
+            </div>
+
+        </section>
+        <div id="details" >
+                
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white p-4 text-center mt-auto">
+        &copy; 2024 Sports DB. All rights reserved.
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
